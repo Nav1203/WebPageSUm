@@ -20,7 +20,7 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
-url = "https://www.brookings.edu/articles/how-artificial-intelligence-is-transforming-the-world/"  
+url = "https://training.seer.cancer.gov/"  
 
 driver = webdriver.Chrome()  
 
