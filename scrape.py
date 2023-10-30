@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 from selenium import webdriver
 
-url = "https://www.ibm.com/topics/data-science"
+url = "https://ellicium.com/blog/5-efficient-ways-to-extract-text-from-articles/#:~:text=Html2text,designed%20for%20article%20text%20extraction."
 
 driver = webdriver.Chrome()  
 
