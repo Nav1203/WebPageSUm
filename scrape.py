@@ -23,6 +23,7 @@ class GetWebpageData:
     def __init__(self):
         self.driver=webdriver.Chrome()
     def getTextfromURL(self,url):
+        self.driver.get(url)
         html=self.driver.page_source
         soup = BeautifulSoup(html, 'html.parser')
         text = soup.get_text()
