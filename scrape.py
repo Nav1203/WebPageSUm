@@ -19,20 +19,29 @@
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
+class GetWebpageData:
+    def __init__(self):
+        self.driver=webdriver.Chrome()
+    def getTextfromURL(self,url):
+        html=self.driver.page_source
+        soup = BeautifulSoup(html, 'html.parser')
+        text = soup.get_text()
+        return text
 
-url = "https://www.isro.gov.in/Making_Chandrayaan3_ISRO_culture.html"  
 
-driver = webdriver.Chrome()  
+# url = "https://www.isro.gov.in/Making_Chandrayaan3_ISRO_culture.html"  
 
-driver.get(url)
+# driver = webdriver.Chrome()  
 
-html = driver.page_source
+# driver.get(url)
 
-soup = BeautifulSoup(html, 'html.parser')
+# html = driver.page_source
 
-text = soup.get_text()
+# soup = BeautifulSoup(html, 'html.parser')
 
-print(text)
+# text = soup.get_text()
 
-driver.quit()
+# print(text)
+
+# driver.quit()
 
