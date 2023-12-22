@@ -76,8 +76,10 @@ if response.status_code == 200:
         if element.name == 'p' and not element.has_attr('id') and not has_span_ancestor(element):
             text = element.get_text(strip=True)
             all_elements.append(text)
-    for element in all_elements:
-        print(element)
+    return '\n'.join(all_elements)
+    print(all_elements)
+    # for element in all_elements:
+    #     print(element)
     # elements = soup.find_all(['p','li','h1','h2','h3','h4'])
     # for element in elements:
     #     text = element.get_text(strip=True)
